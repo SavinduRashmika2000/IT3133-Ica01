@@ -3,6 +3,7 @@ import '../assets/CSS/layout.css';
 import {flower} from './FlowerDB';
 import Product from './Product';
 import Prduct from './Product';
+import Cart from './Cart';
 
 export default function Products(){
    
@@ -24,7 +25,7 @@ export default function Products(){
             </div>
             <div className="item3">
                 {
-                //cart
+                <Cart/>
                 }
             </div>
         </>
