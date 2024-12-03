@@ -1,6 +1,8 @@
 
 import '../assets/CSS/layout.css';
-
+import {flower} from './FlowerDB';
+import Product from './Product';
+import Prduct from './Product';
 
 export default function Products(){
    
@@ -13,7 +15,9 @@ export default function Products(){
                 <h4 className="card-title">Buy flowers</h4>
                 <div className="grid-container">
                     {
-                        //product
+                        flower.map((flowers)=>(
+                            <Product/>
+                        ))
                     }
                 </div>
 
