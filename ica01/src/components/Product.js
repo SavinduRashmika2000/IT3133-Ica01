@@ -4,7 +4,13 @@ export default function Product(props){
     const[quantity,setQuantity]=useState(0);
     const addItem=()=>{
         if(quantity>0){
+            const item={
+                name:props.flower.name,
+                quantity:quantity,
+                price:props.flower.price*quantity,
+            }
             
+            props.setCart((prev)=>([...prev,item]));
         }
     }
     return(
@@ -18,7 +24,7 @@ export default function Product(props){
                         <label for="quantity">Quantity:</label>
                         <input type="number" id="quantity" name="quantity" onChange={(e)=>setQuantity(e.target.value)}/>
                     </div>
-                    <button class="card-button">Add to Cart</button>
+                    <button class="card-button"onClick={addItem}>Add to Cart</button>
                 </div>
             </div>
         </div>
