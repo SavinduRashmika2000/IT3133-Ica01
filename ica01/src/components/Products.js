@@ -20,7 +20,7 @@ export default function Products(){
                 <div className="grid-container">
                     {
                         flowers.map((flower)=>(
-                            <Product flower={flower} setCart={setCart} gPrice={setGrandPrice}/>
+                            <Product flower={flower} setCart={setCart} setGprice={setGrandPrice} gPrice={grandPrice}/>
                         ))
                     }
                 </div>

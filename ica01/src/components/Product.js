@@ -9,7 +9,7 @@ export default function Product(props){
                 quantity:quantity,
                 price:props.flower.price*quantity,
             }
-            
+            props.setGprice(props.gPrice+item.price)
             props.setCart((prev)=>([...prev,item]));
         }
     }
